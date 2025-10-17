@@ -1,0 +1,28 @@
+weight = float(input("Weight (lbs): "))
+destination = input("Destination (domestic/international): ").lower()
+membership = input("Membership (standard/premium): ").lower()
+
+base_shipping_cost = 10.0
+total_cost = base_shipping_cost
+
+details = f"Base: ${base_shipping_cost}"
+
+if weight > 20:
+    overweight_surcharge = 5.0
+    total_cost += overweight_surcharge
+    details += f" + Overweight ${overweight_surcharge}"
+
+if destination == "international":
+    international_surcharge = total_cost
+    total_cost += international_surcharge
+    details += f", International surcharge applied (doubled total cost)"
+
+if membership == "premium":
+    premium_discount = 0.20 * total_cost
+    total_cost -= premium_discount
+    details += f", Premium 20% discount applied"
+    if destination == "international":
+        details += ", International fee waived."
+
+print(f"Final Shipping Cost: ${total_cost:.2f}")
+print(f"(Details: {details})")
