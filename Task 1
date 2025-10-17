@@ -1,0 +1,18 @@
+a = 15
+b = 4
+
+addition = a + b
+subtraction = a - b
+multiplication = a * b
+floating_division = a / b
+integer_division = a // b
+modulus = a % b
+exponentiation = a ** b
+
+print("Addition:", addition)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)
+print("Floating-Point Division:", floating_division)
+print("Integer Division:", integer_division)
+print("Modulus:", modulus)
+print("Exponentiation:", exponentiation)
